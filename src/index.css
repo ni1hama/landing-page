@@ -6,39 +6,46 @@
   html {
     scroll-behavior: smooth;
   }
-  html, body, #root {
-    height: 100%;
-    @apply bg-black text-white antialiased;
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    @apply bg-stone-50 text-stone-900 antialiased;
+  }
+  ::selection {
+    @apply bg-emerald-200 text-stone-900;
   }
 }
 
-/* Legal / prose pages */
 @layer components {
-  .prose-legal {
-    @apply text-white/60 leading-relaxed;
+  .rule {
+    @apply h-px w-full bg-stone-200;
   }
-  .prose-legal h2 {
-    @apply text-xl font-semibold text-white mt-10 mb-3;
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-3 py-1 text-xs font-medium text-stone-600;
   }
-  .prose-legal h3 {
-    @apply text-lg font-semibold text-white/90 mt-8 mb-2;
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-stone-900 px-5 py-2.5 text-sm font-medium text-stone-50 transition hover:bg-stone-700;
   }
-  .prose-legal h4 {
-    @apply text-base font-semibold text-white/80 mt-6 mb-2;
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-md border border-stone-300 bg-white px-5 py-2.5 text-sm font-medium text-stone-800 transition hover:border-stone-400;
   }
-  .prose-legal p {
+  .legal {
+    @apply text-stone-700 leading-relaxed;
+  }
+  .legal h2 {
+    @apply mt-12 mb-3 text-lg font-semibold text-stone-900;
+  }
+  .legal h3 {
+    @apply mt-8 mb-2 text-base font-semibold text-stone-800;
+  }
+  .legal p {
     @apply mb-4;
   }
-  .prose-legal ul {
-    @apply list-disc pl-6 mb-4 space-y-1.5;
+  .legal ul {
+    @apply mb-4 list-disc space-y-1.5 pl-6;
   }
-  .prose-legal ol {
-    @apply list-decimal pl-6 mb-4 space-y-1.5;
-  }
-  .prose-legal a {
-    @apply text-brand-400 hover:text-brand-300 transition-colors;
-  }
-  .prose-legal strong {
-    @apply text-white/80;
+  .legal a {
+    @apply text-emerald-700 underline underline-offset-2 hover:text-emerald-800;
   }
 }
