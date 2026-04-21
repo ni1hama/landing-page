@@ -35,11 +35,6 @@ export default function Footer() {
                   Principles
                 </a>
               </li>
-              <li>
-                <a href="/#company" className="hover:text-stone-900">
-                  Company
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -64,7 +59,7 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-stone-200 pt-6 text-xs text-stone-500 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {year} PPKA.AI. All rights reserved.</p>
-          <p className="font-mono tracking-wider">Singapore · Est. 2025</p>
+          <p className="font-mono tracking-wider">Singapore · Est. 2026</p>
         </div>
       </div>
     </footer>

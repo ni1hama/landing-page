@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const capabilities = [
   {
     id: "01",
@@ -42,14 +40,6 @@ const principles = [
   },
 ];
 
-const facts = [
-  { k: "Company", v: "PPKA.AI" },
-  { k: "Headquarters", v: "Singapore" },
-  { k: "Founded", v: "2025" },
-  { k: "Focus", v: "Agent engineering · LLM systems" },
-  { k: "Stage", v: "Building in production" },
-];
-
 export default function Home() {
   return (
     <>
@@ -68,7 +58,7 @@ export default function Home() {
             PPKA.AI · Singapore
           </span>
           <span className="section-label hidden sm:inline">
-            Est. 2025 / Agent engineering
+            Est. 2026 / Agent engineering
           </span>
         </div>
         <h1 className="mt-8 max-w-[22ch] font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-stone-900 md:text-6xl">
@@ -87,8 +77,8 @@ export default function Home() {
           <a href="#work" className="btn-primary">
             See what we build
           </a>
-          <a href="#company" className="btn-ghost">
-            About the company
+          <a href="#principles" className="btn-ghost">
+            How we work
           </a>
         </div>
       </section>
@@ -173,58 +163,6 @@ export default function Home() {
         <p className="mt-6 font-mono text-xs uppercase tracking-[0.18em] text-stone-500">
           — The PPKA.AI team
         </p>
-      </section>
-
-      <div className="rule mx-auto max-w-5xl" />
-
-      {/* Company */}
-      <section id="company" className="mx-auto max-w-5xl px-6 py-24">
-        <div className="grid gap-12 md:grid-cols-[1fr_1.2fr]">
-          <div>
-            <p className="section-label">§ 04 — Company</p>
-            <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-stone-900 md:text-4xl">
-              PPKA.AI at a glance.
-            </h2>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-stone-600">
-              PPKA.AI is an independent engineering team headquartered in
-              Singapore. We are a registered operating business focused on
-              applied AI — not a research lab, not a consultancy.
-            </p>
-          </div>
-          <div className="rounded-lg border border-stone-200 bg-white">
-            <dl>
-              {facts.map((f, i) => (
-                <div
-                  key={f.k}
-                  className={`grid grid-cols-[140px_1fr] gap-6 px-6 py-4 ${
-                    i !== facts.length - 1 ? "border-b border-stone-200" : ""
-                  }`}
-                >
-                  <dt className="font-mono text-xs uppercase tracking-[0.12em] text-stone-500">
-                    {f.k}
-                  </dt>
-                  <dd className="text-sm text-stone-900">{f.v}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </div>
-
-        <div className="mt-10 flex flex-wrap items-center gap-3 text-sm text-stone-600">
-          <Link
-            to="/legal#privacy"
-            className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800"
-          >
-            Privacy Policy
-          </Link>
-          <span className="text-stone-300">·</span>
-          <Link
-            to="/legal#terms"
-            className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800"
-          >
-            Terms of Service
-          </Link>
-        </div>
       </section>
     </>
   );

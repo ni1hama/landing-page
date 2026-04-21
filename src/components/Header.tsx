@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 const navItems = [
   { label: "What we build", href: "/#work" },
   { label: "Principles", href: "/#principles" },
-  { label: "Company", href: "/#company" },
   { label: "Legal", to: "/legal" },
 ];
 
